@@ -61,26 +61,29 @@ h1{
 
         &-img{
             border-radius: 50%;
-            border: 5px solid white;
-            margin-top: -53px;
-            width: 90px;
-            height: 90px;
+            padding: 10px;
+            border: 1px solid white;
+            margin-top: -100px;
+            width: 200px;
+            height: 200px;
             background-color: white;
         }
 
-        &-text, &-title span{
+        &-title{
             color: var(--Dark-gray);
-            font-weight: 400;
-        }
+            
+            &-hp {
+                font-size: 1.3rem;
+                margin-left: 0.7rem;
+                font-weight: 400;
+            }
 
-        &-text{
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
+            &-nombre{
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                color: var(--Very-dark-desaturated-blue);
+            }
 
-        &-title span{
-            font-size: 1.3rem;
-            margin-left: 0.7rem;
         }
     }
 
@@ -94,7 +97,7 @@ h1{
         &-info{
             letter-spacing: 1px;
 
-            &-number{
+            &-attaco, &-difesa, &-speciale{
                 font-weight: bold;
                 font-size: 2.5rem;
             }

@@ -73,26 +73,28 @@ h1 {
 
 .card-body-img {
   border-radius: 50%;
-  border: 5px solid white;
-  margin-top: -53px;
-  width: 90px;
-  height: 90px;
+  padding: 10px;
+  border: 1px solid white;
+  margin-top: -100px;
+  width: 200px;
+  height: 200px;
   background-color: white;
 }
 
-.card-body-text, .card-body-title span {
+.card-body-title {
   color: var(--Dark-gray);
+}
+
+.card-body-title-hp {
+  font-size: 1.3rem;
+  margin-left: 0.7rem;
   font-weight: 400;
 }
 
-.card-body-text {
+.card-body-title-nombre {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-}
-
-.card-body-title span {
-  font-size: 1.3rem;
-  margin-left: 0.7rem;
+  color: var(--Very-dark-desaturated-blue);
 }
 
 .card-footer {
@@ -110,7 +112,7 @@ h1 {
   letter-spacing: 1px;
 }
 
-.card-footer-info-number {
+.card-footer-info-attaco, .card-footer-info-difesa, .card-footer-info-speciale {
   font-weight: bold;
   font-size: 2.5rem;
 }

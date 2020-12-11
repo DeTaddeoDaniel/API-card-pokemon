@@ -20,7 +20,19 @@ const fetchData = async ()=> {
 
         console.log(data.id + ' : ' + data.name);
 
-        pintarCard(data);
+        const pokemon = {
+            imagen: data.sprites.other.dream_world.front_default,
+            nombre: data.name,
+            hp: data.stats[0].base_stat,
+            experiencia: data.base_experience,
+            ataque: data.stats[1].base_stat,
+            especial: data.stats[2].base_stat,
+            difesa: data.stats[3].base_stat,
+        };
+
+        pintarCard(pokemon);
+
+
 
     } catch(e){
         console.log(e);
@@ -34,6 +46,7 @@ $(document).ready(fetchData());
 
 // pintar carta
 const pintarCard = (pokemon) => {
+
     // test ingresso
     console.log(pokemon);
     // dove lo metto
@@ -45,8 +58,17 @@ const pintarCard = (pokemon) => {
     // fare un fragment
     const fragment = document.createDocumentFragment();
 
-    clone.querySelector('.card-body img').setAttribute('src', pokemon.sprites.other.dream_world.front_default);
+
+    //================================================
+    clone.querySelector('.card-body img').setAttribute('src', pokemon.imagen);
+    clone.querySelector('.card-body-title-nombre').innerHTML = pokemon.nombre;
+    clone.querySelector('.card-body-title-hp').innerHTML = pokemon.hp + ' hp'; 
+    clone.querySelector('.card-body-text').textContent = pokemon.experiencia + " exp"; 
     
+    clone.querySelector('.card-footer-info-attaco').textContent = pokemon.ataque + 'k'; 
+    clone.querySelector('.card-footer-info-speciale').textContent = pokemon.especial + 'k';
+    clone.querySelector('.card-footer-info-difesa').textContent = pokemon.difesa + 'k';
+
     fragment.appendChild(clone);
 
     flex.appendChild(fragment);
