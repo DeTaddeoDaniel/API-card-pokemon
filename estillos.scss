@@ -1,0 +1,105 @@
+/* reset html*/
+:root{
+
+    // variabili di stile
+    --dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color:var(--dark-cyan);
+
+    background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-top.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left -50vw top -50vh, right -50vw bottom -50vh;
+}
+
+/* inizio file*/
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1{
+    // ogni +1 vale 10px
+    font-size: 2em;
+}
+
+.card{
+    background-color: white;
+    width: 375px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px lightblue;
+
+    // & rempleza alla classe precedente
+    &-header{
+        width: 100%;
+        display: block;
+    }
+
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid rgba(153, 153, 153, 0.911);
+
+        &-img{
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-top: -53px;
+        }
+
+        &-text, &-title span{
+            color: var(--Dark-gray);
+            font-weight: 400;
+        }
+
+        &-text{
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &-title span{
+            font-size: 1.3rem;
+            margin-left: 0.7rem;
+        }
+    }
+
+    &-footer{
+        margin-top: 1.2rem;
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.5rem;
+        text-align: center;
+
+        &-info{
+            letter-spacing: 1px;
+
+            &-number{
+                font-weight: bold;
+                font-size: 2.5rem;
+            }
+
+            &-text{
+                color: var(--Dark-gray);
+            }
+        }
+    }
+
+}
